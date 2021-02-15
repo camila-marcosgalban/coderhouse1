@@ -1,0 +1,529 @@
+@charset "UTF-8";
+/*variables*/
+/*fonts*/
+h1,
+strong {
+  font-family: "Noto Sans KR", sans-serif;
+  text-transform: uppercase;
+  color: #64C4B3;
+  font-weight: 600;
+}
+
+p {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 1.2rem;
+}
+
+@media only screen and (min-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+/* general */
+html {
+  min-height: 100%;
+  position: relative;
+}
+
+body {
+  margin: 0;
+  margin-bottom: 50px;
+}
+
+header {
+  font-family: "Noto Sans KR", sans-serif;
+  text-transform: uppercase;
+}
+
+header .dropdown-menu {
+  background-color: #392979;
+  -webkit-backface-visibility: visible;
+          backface-visibility: visible;
+}
+
+header .dropdown-item {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+header .dropdown-item:hover {
+  background-color: #50408e;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.footerIndex, .footer {
+  color: #b1a5b3;
+  border-top: 5px solid #64C4B3;
+  background: -webkit-gradient(linear, left top, left bottom, from(#392979), to(#50408e));
+  background: linear-gradient(to bottom, #392979, #50408e);
+  width: 100%;
+  height: 160px;
+  position: absolute;
+}
+
+.footer {
+  bottom: -8rem;
+}
+
+/* index */
+header {
+  background-color: #392979;
+  border-bottom: 5px solid #64C4B3;
+}
+
+.logoGif {
+  background-color: #392979;
+  padding: 0px;
+  overflow: hidden;
+}
+
+.imgIndexPorfolio {
+  width: 80%;
+}
+
+.proyectosIndex {
+  background-color: #64C4B3;
+  color: white;
+}
+
+.proyectosIndex:hover {
+  -webkit-transform: scale(1.2, 1.2);
+          transform: scale(1.2, 1.2);
+  -webkit-transition: ease-out cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: ease-out cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.footerIndex__texto {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+#servicios {
+  background-color: #64C4B3;
+}
+
+.servicios__title {
+  color: #363636;
+  font-weight: 500;
+}
+
+.btn_purple, .btn_more {
+  background: #50408e;
+  color: white;
+  font-size: 0.7rem;
+}
+
+.btn_more {
+  width: 100%;
+}
+
+.btn_more a {
+  color: white;
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 600px) {
+  .btn_purple, .btn_more {
+    font-size: 1rem;
+  }
+  .btn_more {
+    width: 30%;
+  }
+}
+
+.hide {
+  display: none;
+}
+
+/*nosotros*/
+#nosotros {
+  background-color: #50408e;
+  color: white;
+}
+
+#nosotros main p {
+  line-height: 3rem;
+}
+
+.imgNosotros {
+  width: 200px;
+}
+
+/*portflio*/
+.imgPortfolio {
+  width: 250px;
+}
+
+.contenedorHover, .contenedorHover:hover {
+  position: relative;
+  width: 250px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.contenedorHover .hoverCategorias {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #64C4B3;
+  border-top: solid #64C4B3 0.1rem;
+  width: 250px;
+  display: none;
+}
+
+.contenedorHover:hover {
+  background-color: #64C4B3;
+  opacity: 90%;
+}
+
+.contenedorHover:hover .hoverCategorias {
+  display: block;
+  opacity: 100%;
+  width: 250px;
+}
+
+/*categorias*/
+.contenedorHover2, .contenedorHover2:hover {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.contenedorHover2 .hover3d {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #201f1f;
+  border-top: solid #201f1f 0.1rem;
+  width: 250px;
+  display: none;
+}
+
+.contenedorHover2:hover {
+  width: 250px;
+  height: 250px;
+}
+
+.contenedorHover2:hover .hover3d {
+  display: block;
+  opacity: 80%;
+  width: 250px;
+}
+
+/*3d*/
+.background--globo {
+  background: url(../media/3d/globo_square.jpg);
+}
+
+.background--espada {
+  background: url(../media/3d/espada_square.jpg);
+}
+
+.background--roland {
+  background: url(../media/3d/roland_square.jpg);
+}
+
+.background--pioneer {
+  background: url(../media/3d/pioneer_square.jpg);
+}
+
+.background--hacha {
+  background: url(../media/3d/hacha_square.jpg);
+}
+
+.background--van {
+  background: url(../media/3d/van_square.jpg);
+}
+
+.background--globo:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(241, 194, 91, 0.45)), to(rgba(240, 178, 44, 0.45))), url(../media/3d/globo_square.jpg);
+  background: linear-gradient(rgba(241, 194, 91, 0.45), rgba(240, 178, 44, 0.45)), url(../media/3d/globo_square.jpg);
+}
+
+.background--espada:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(243, 116, 116, 0.45)), to(rgba(243, 116, 116, 0.45))), url(../media/3d/espada_square.jpg);
+  background: linear-gradient(rgba(243, 116, 116, 0.45), rgba(243, 116, 116, 0.45)), url(../media/3d/espada_square.jpg);
+}
+
+.background--roland:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(89, 131, 248, 0.45)), to(rgba(89, 131, 248, 0.45))), url(../media/3d/roland_square.jpg);
+  background: linear-gradient(rgba(89, 131, 248, 0.45), rgba(89, 131, 248, 0.45)), url(../media/3d/roland_square.jpg);
+}
+
+.background--pioneer:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(184, 245, 143, 0.45)), to(rgba(184, 245, 143, 0.45))), url(../media/3d/pioneer_square.jpg);
+  background: linear-gradient(rgba(184, 245, 143, 0.45), rgba(184, 245, 143, 0.45)), url(../media/3d/pioneer_square.jpg);
+}
+
+.background--hacha:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(133, 220, 247, 0.45)), to(rgba(133, 220, 247, 0.45))), url(../media/3d/hacha_square.jpg);
+  background: linear-gradient(rgba(133, 220, 247, 0.45), rgba(133, 220, 247, 0.45)), url(../media/3d/hacha_square.jpg);
+}
+
+.background--van:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(233, 160, 248, 0.45)), to(rgba(233, 160, 248, 0.45))), url(../media/3d/van_square.jpg);
+  background: linear-gradient(rgba(233, 160, 248, 0.45), rgba(233, 160, 248, 0.45)), url(../media/3d/van_square.jpg);
+}
+
+/*campañas*/
+.background--bayer {
+  background: url(../media/campañas/bayer_square.jpg);
+}
+
+.background--hospital {
+  background: url(../media/campañas/hospital_square.jpg);
+}
+
+.background--citroen {
+  background: url(../media/campañas/citroen_square.jpg);
+}
+
+.background--bayer:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(91, 206, 241, 0.637)), to(rgba(91, 206, 241, 0.637))), url(../media/campañas/bayer_square.jpg);
+  background: linear-gradient(rgba(91, 206, 241, 0.637), rgba(91, 206, 241, 0.637)), url(../media/campañas/bayer_square.jpg);
+}
+
+.background--hospital:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(131, 243, 116, 0.45)), to(rgba(131, 243, 116, 0.45))), url(../media/campañas/hospital_square.jpg);
+  background: linear-gradient(rgba(131, 243, 116, 0.45), rgba(131, 243, 116, 0.45)), url(../media/campañas/hospital_square.jpg);
+}
+
+.background--citroen:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(248, 192, 89, 0.45)), to(rgba(248, 192, 89, 0.45))), url(../media/campañas/citroen_square.jpg);
+  background: linear-gradient(rgba(248, 192, 89, 0.45), rgba(248, 192, 89, 0.45)), url(../media/campañas/citroen_square.jpg);
+}
+
+/*ilustracion*/
+.background--arrow {
+  background: url(../media/ilustracion/arrow_square.jpg);
+}
+
+.background--funko {
+  background: url(../media/ilustracion/funko_square.jpg);
+}
+
+.background--olas {
+  background: url(../media/ilustracion/olas_square.jpg);
+}
+
+.background--avatar {
+  background: url(../media/ilustracion/avatar_square.jpg);
+}
+
+.background--avatar2 {
+  background: url(../media/ilustracion/avatar2_square.jpg);
+}
+
+.background--avatar3 {
+  background: url(../media/ilustracion/avatar3_square.jpg);
+}
+
+.background--arrow:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(4, 124, 44, 0.726)), to(rgba(4, 124, 44, 0.726))), url(../media/ilustracion/arrow_square.jpg);
+  background: linear-gradient(rgba(4, 124, 44, 0.726), rgba(4, 124, 44, 0.726)), url(../media/ilustracion/arrow_square.jpg);
+}
+
+.background--funko:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(153, 115, 11, 0.726)), to(rgba(153, 115, 11, 0.726))), url(../media/ilustracion/funko_square.jpg);
+  background: linear-gradient(rgba(153, 115, 11, 0.726), rgba(153, 115, 11, 0.726)), url(../media/ilustracion/funko_square.jpg);
+}
+
+.background--olas:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(64, 49, 197, 0.726)), to(rgba(64, 49, 197, 0.726))), url(../media/ilustracion/olas_square.jpg);
+  background: linear-gradient(rgba(64, 49, 197, 0.726), rgba(64, 49, 197, 0.726)), url(../media/ilustracion/olas_square.jpg);
+}
+
+.background--avatar:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(4, 124, 44, 0.45)), to(rgba(4, 124, 44, 0.45))), url(../media/ilustracion/avatar_square.jpg);
+  background: linear-gradient(rgba(4, 124, 44, 0.45), rgba(4, 124, 44, 0.45)), url(../media/ilustracion/avatar_square.jpg);
+}
+
+.background--avatar2:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(54, 164, 184, 0.45)), to(rgba(54, 164, 184, 0.45))), url(../media/ilustracion/avatar2_square.jpg);
+  background: linear-gradient(rgba(54, 164, 184, 0.45), rgba(54, 164, 184, 0.45)), url(../media/ilustracion/avatar2_square.jpg);
+}
+
+.background--avatar3:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(64, 49, 197, 0.45)), to(rgba(64, 49, 197, 0.45))), url(../media/ilustracion/avatar3_square.jpg);
+  background: linear-gradient(rgba(64, 49, 197, 0.45), rgba(64, 49, 197, 0.45)), url(../media/ilustracion/avatar3_square.jpg);
+}
+
+/*apps y juegos*/
+.background--disway {
+  background: url(../media/apps/disway_square.jpg);
+}
+
+.background--juegos {
+  background: url(../media/apps/juegos_square.jpg);
+}
+
+.background--ubuddy {
+  background: url(../media/apps/ubuddy_square.jpg);
+}
+
+.background--hp {
+  background: url(../media/apps/hp_square.jpg);
+}
+
+.background--ralph {
+  background: url(../media/apps/ralph_square.jpg);
+}
+
+.background--sniper {
+  background: url(../media/apps/sniper_square.jpg);
+}
+
+.background--disway:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(170, 89, 224, 0.726)), to(rgba(170, 89, 224, 0.726))), url(../media/apps/disway_square.jpg);
+  background: linear-gradient(rgba(170, 89, 224, 0.726), rgba(170, 89, 224, 0.726)), url(../media/apps/disway_square.jpg);
+}
+
+.background--juegos:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(172, 52, 36, 0.726)), to(rgba(172, 52, 36, 0.726))), url(../media/apps/juegos_square.jpg);
+  background: linear-gradient(rgba(172, 52, 36, 0.726), rgba(172, 52, 36, 0.726)), url(../media/apps/juegos_square.jpg);
+}
+
+.background--ubuddy:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(96, 180, 206, 0.726)), to(rgba(96, 180, 206, 0.726))), url(../media/apps/ubuddy_square.jpg);
+  background: linear-gradient(rgba(96, 180, 206, 0.726), rgba(96, 180, 206, 0.726)), url(../media/apps/ubuddy_square.jpg);
+}
+
+.background--hp:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(82, 11, 26, 0.45)), to(rgba(82, 11, 26, 0.45))), url(../media/apps/hp_square.jpg);
+  background: linear-gradient(rgba(82, 11, 26, 0.45), rgba(82, 11, 26, 0.45)), url(../media/apps/hp_square.jpg);
+}
+
+.background--ralph:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(179, 142, 19, 0.774)), to(rgba(179, 141, 19, 0.774))), url(../media/apps/ralph_square.jpg);
+  background: linear-gradient(rgba(179, 142, 19, 0.774), rgba(179, 141, 19, 0.774)), url(../media/apps/ralph_square.jpg);
+}
+
+.background--sniper:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(64, 49, 197, 0.76)), to(rgba(64, 49, 197, 0.76))), url(../media/apps/sniper_square.jpg);
+  background: linear-gradient(rgba(64, 49, 197, 0.76), rgba(64, 49, 197, 0.76)), url(../media/apps/sniper_square.jpg);
+}
+
+/*motion*/
+.background--tanque {
+  background: url(../media/motion/tanque_square.jpg);
+}
+
+.background--huawei {
+  background: url(../media/motion/huawei.jpg);
+}
+
+.background--uncharted {
+  background: url(../media/motion/unhcarted_square.jpg);
+}
+
+.background--joker {
+  background: url(../media/motion/joker_square.jpg);
+}
+
+.background--flash {
+  background: url(../media/motion/flash_square.jpg);
+}
+
+.background--deadpool {
+  background: url(../media/motion/deadpool_square.jpg);
+}
+
+.background--tanque:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(135, 172, 13, 0.541)), to(rgba(135, 172, 13, 0.541))), url(../media/motion/tanque_square.jpg);
+  background: linear-gradient(rgba(135, 172, 13, 0.541), rgba(135, 172, 13, 0.541)), url(../media/motion/tanque_square.jpg);
+}
+
+.background--huawei:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(172, 52, 36, 0.726)), to(rgba(172, 52, 36, 0.726))), url(../media/motion/huawei.jpg);
+  background: linear-gradient(rgba(172, 52, 36, 0.726), rgba(172, 52, 36, 0.726)), url(../media/motion/huawei.jpg);
+}
+
+.background--uncharted:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(96, 180, 206, 0.726)), to(rgba(96, 180, 206, 0.726))), url(../media/motion/unhcarted_square.jpg);
+  background: linear-gradient(rgba(96, 180, 206, 0.726), rgba(96, 180, 206, 0.726)), url(../media/motion/unhcarted_square.jpg);
+}
+
+.background--joker:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(82, 11, 26, 0.45)), to(rgba(82, 11, 26, 0.45))), url(../media/motion/joker_square.jpg);
+  background: linear-gradient(rgba(82, 11, 26, 0.45), rgba(82, 11, 26, 0.45)), url(../media/motion/joker_square.jpg);
+}
+
+.background--flash:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(179, 141, 19, 0.45)), to(rgba(179, 141, 19, 0.45))), url(../media/motion/flash_square.jpg);
+  background: linear-gradient(rgba(179, 141, 19, 0.45), rgba(179, 141, 19, 0.45)), url(../media/motion/flash_square.jpg);
+}
+
+.background--deadpool:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(64, 49, 197, 0.45)), to(rgba(64, 49, 197, 0.45))), url(../media/motion/deadpool_square.jpg);
+  background: linear-gradient(rgba(64, 49, 197, 0.45), rgba(64, 49, 197, 0.45)), url(../media/motion/deadpool_square.jpg);
+}
+
+/*web*/
+.background--arrow {
+  background: url(../media/web/arrow_square.jpg);
+}
+
+.background--ed {
+  background: url(../media/web/ed_square.jpg);
+}
+
+.background--formula {
+  background: url(../media/web/formula_square.jpg);
+}
+
+.background--arrow:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(5, 95, 10, 0.726)), to(rgba(5, 95, 10, 0.726))), url(../media/web/arrow_square.jpg);
+  background: linear-gradient(rgba(5, 95, 10, 0.726), rgba(5, 95, 10, 0.726)), url(../media/web/arrow_square.jpg);
+}
+
+.background--ed:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(31, 171, 195, 0.726)), to(rgba(31, 171, 195, 0.726))), url(../media/web/ed_square.jpg);
+  background: linear-gradient(rgba(31, 171, 195, 0.726), rgba(31, 171, 195, 0.726)), url(../media/web/ed_square.jpg);
+}
+
+.background--formula:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(179, 31, 31, 0.726)), to(rgba(179, 31, 31, 0.726))), url(../media/web/formula_square.jpg);
+  background: linear-gradient(rgba(179, 31, 31, 0.726), rgba(179, 31, 31, 0.726)), url(../media/web/formula_square.jpg);
+}
+
+/*proyectos*/
+.imgSoftware {
+  width: 50px;
+}
+
+#proyectoBody {
+  background-color: #50408e;
+  color: white;
+}
+
+.resize {
+  width: 70%;
+}
+
+.resize2 {
+  width: 40%;
+}
+
+/*contacto*/
+.icons {
+  width: 24px;
+}
+
+.btn_verde {
+  background-color: #64C4B3;
+}
+
+.mapa {
+  width: 80%;
+}
+/*# sourceMappingURL=style_sass.css.map */

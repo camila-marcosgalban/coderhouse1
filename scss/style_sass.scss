@@ -1,0 +1,532 @@
+/*variables*/
+$title_font: 'Noto Sans KR', sans-serif;
+$body_font:'Quicksand', sans-serif;
+$color1:#392979;
+$color2: #50408e;
+$color3:#64C4B3;
+$color4:rgba(255, 255, 255, .75);
+
+/*fonts*/
+
+h1,
+strong{
+    font-family: $title_font;
+    text-transform: uppercase;
+    color: $color3;
+    font-weight: 600;
+}
+
+p {
+    font-family: $body_font;
+    font-weight: 500;
+}
+
+h1 {
+    font-size: 1.2rem;
+}
+
+@media only screen and (min-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+/* general */
+html {
+    min-height: 100%;
+    position: relative;
+}
+
+body {
+    margin: 0;
+    margin-bottom: 50px;
+}
+
+header {
+    font-family: $title_font;
+    text-transform: uppercase;
+
+    .dropdown-menu {
+        background-color: $color1;
+        backface-visibility: visible;
+    }
+
+    .dropdown-item {
+        color:$color4;
+    }
+
+    .dropdown-item:hover {
+        background-color: $color2;
+        color:$color4;
+    }
+}
+
+.footerIndex{
+    color: rgb(177, 165, 179);
+    border-top: 5px solid $color3;
+    background: linear-gradient(to bottom, $color1, $color2);
+    width: 100%;
+    height: 160px;
+    position: absolute;
+
+}
+
+.footer {
+    @extend.footerIndex;
+    bottom: -8rem;
+}
+
+/* index */
+
+header {
+    background-color: $color1;
+    border-bottom: 5px solid $color3;
+}
+
+.logoGif {
+    background-color: $color1;
+    padding: 0px;
+    overflow: hidden;
+}
+
+.imgIndexPorfolio {
+    width: 80%;
+}
+
+.proyectosIndex {
+    background-color: $color3;
+    color: white;
+}
+
+.proyectosIndex:hover{
+    transform: scale(1.2,1.2);
+    transition: ease-out cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.footerIndex__texto{
+    text-align: center;
+    margin-top: 1rem;
+}
+
+#servicios{
+    background-color: #64C4B3;
+}
+
+.servicios__title{
+    color: rgb(54, 54, 54);
+    font-weight: 500;
+}
+
+.btn_purple{
+    background: $color2;
+    color: white;
+    font-size: 0.7rem;
+}
+
+.btn_more{
+    @extend.btn_purple;
+    width: 100%;
+    a{
+        color: white;
+        text-decoration: none;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .btn_purple {
+        font-size: 1rem;
+    }
+    .btn_more {
+        width: 30%;
+    }
+}
+
+.hide{
+    display: none;
+}
+
+/*nosotros*/
+
+#nosotros {
+    background-color: $color2;
+    color: white;
+    main p {
+    line-height: 3rem;
+}
+}
+
+.imgNosotros {
+    width: 200px;
+}
+
+/*portflio*/
+
+.imgPortfolio {
+    width: 250px;
+}
+
+.contenedorHover {
+    position: relative;
+    width: 250px;
+    margin: 0px;
+    padding: 0px;
+    .hoverCategorias {
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: $color3;
+        border-top: solid $color3 0.1rem;
+        width: 250px;
+        display: none;
+    } 
+}
+
+.contenedorHover:hover {
+    background-color:$color3;
+    opacity: 90%;
+    @extend.contenedorHover;
+    .hoverCategorias {
+        display: block;
+        opacity: 100%;
+        width: 250px;
+    }
+}
+
+/*categorias*/
+.contenedorHover2{
+    position: relative;
+    width: 250px;
+    height: 250px;
+    margin: 0px;
+    padding: 0px;
+    .hover3d {
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: rgb(32, 31, 31);
+        border-top: solid rgb(32, 31, 31) 0.1rem;
+        width: 250px;
+        display: none;
+    } 
+}
+
+.contenedorHover2:hover {
+    width: 250px;
+    height: 250px;
+    @extend.contenedorHover2;
+    .hover3d {
+        display: block;
+        opacity: 80%;
+        width: 250px;
+    }
+}
+
+/*3d*/
+$urls: ( 
+        globo:url(../media/3d/globo_square.jpg), 
+        espada:  url(../media/3d/espada_square.jpg),
+        roland: url(../media/3d/roland_square.jpg),
+        pioneer: url(../media/3d/pioneer_square.jpg),
+        hacha:  url(../media/3d/hacha_square.jpg),
+        van: url(../media/3d/van_square.jpg)
+          ); 
+
+$bgs: ( 
+        globo: (linear-gradient(
+            rgba(241, 194, 91, 0.45), 
+            rgba(240, 178, 44, 0.45)),
+        url(../media/3d/globo_square.jpg)),
+        espada:   (linear-gradient(
+            rgba(243, 116, 116, 0.45), 
+            rgba(243, 116, 116, 0.45)),
+            url(../media/3d/espada_square.jpg)),
+     
+        roland: (linear-gradient(
+            rgba(89, 131, 248, 0.45),
+            rgba(89, 131, 248, 0.45)),
+            url(../media/3d/roland_square.jpg)),
+        pioneer: (linear-gradient(
+            rgba(184, 245, 143, 0.45),
+       rgba(184, 245, 143, 0.45)),
+       url(../media/3d/pioneer_square.jpg)),
+        hacha:  (linear-gradient(
+            rgba(133, 220, 247, 0.45),
+            rgba(133, 220, 247, 0.45)),
+            url(../media/3d/hacha_square.jpg)),
+        van: ( linear-gradient(
+            rgba(233, 160, 248, 0.45), 
+            rgba(233, 160, 248, 0.45) ),
+            url(../media/3d/van_square.jpg) ),
+          ); 
+
+         
+@each $url, $img in $urls {
+    .background--#{$url} {
+        background: $img;
+         }};
+
+@each $grad, $bg in $bgs {
+.background--#{$grad}:hover {
+    background: $bg;
+}
+};
+
+/*campañas*/
+$urls2: ( 
+        bayer:url(../media/campañas/bayer_square.jpg), 
+        hospital:  url(../media/campañas/hospital_square.jpg),
+        citroen: url(../media/campañas/citroen_square.jpg)
+          ); 
+
+$bgs2: ( 
+        bayer: (linear-gradient(
+            rgba(91, 206, 241, 0.637), 
+            rgba(91, 206, 241, 0.637)),
+        url(../media/campañas/bayer_square.jpg)),
+        hospital:   (linear-gradient(
+            rgba(131, 243, 116, 0.45), 
+            rgba(131, 243, 116, 0.45)),
+            url(../media/campañas/hospital_square.jpg)),
+     
+        citroen: (linear-gradient(
+            rgba(248, 192, 89, 0.45),
+            rgba(248, 192, 89, 0.45)),
+            url(../media/campañas/citroen_square.jpg)),
+          ); 
+
+         
+@each $url, $img in $urls2 {
+    .background--#{$url} {
+        background: $img;
+         }};
+
+@each $grad, $bg in $bgs2 {
+.background--#{$grad}:hover {
+    background: $bg;
+}
+};
+
+/*ilustracion*/
+$urls3: ( 
+        arrow:url(../media/ilustracion/arrow_square.jpg), 
+        funko:  url(../media/ilustracion/funko_square.jpg),
+        olas: url(../media/ilustracion/olas_square.jpg),
+        avatar:url(../media/ilustracion/avatar_square.jpg), 
+        avatar2:  url(../media/ilustracion/avatar2_square.jpg),
+        avatar3: url(../media/ilustracion/avatar3_square.jpg)
+          ); 
+
+$bgs3: ( 
+        arrow: (linear-gradient(
+            rgba(4, 124, 44, 0.726), 
+            rgba(4, 124, 44, 0.726)),
+        url(../media/ilustracion/arrow_square.jpg)),
+        funko:   (linear-gradient(
+            rgba(153, 115, 11, 0.726), 
+            rgba(153, 115, 11, 0.726)),
+            url(../media/ilustracion/funko_square.jpg)),
+     
+        olas: (linear-gradient(
+            rgba(64, 49, 197, 0.726),
+            rgba(64, 49, 197, 0.726)),
+            url(../media/ilustracion/olas_square.jpg)),
+            avatar: (linear-gradient(
+            rgba(4, 124, 44, 0.45), 
+            rgba(4, 124, 44, 0.45)),
+        url(../media/ilustracion/avatar_square.jpg)),
+        avatar2:   (linear-gradient(
+            rgba(54, 164, 184, 0.45), 
+            rgba(54, 164, 184, 0.45)),
+            url(../media/ilustracion/avatar2_square.jpg)),
+     
+        avatar3: (linear-gradient(
+            rgba(64, 49, 197, 0.45),
+            rgba(64, 49, 197, 0.45)),
+            url(../media/ilustracion/avatar3_square.jpg)),
+          ); 
+
+         
+@each $url, $img in $urls3 {
+    .background--#{$url} {
+        background: $img;
+         }};
+
+@each $grad, $bg in $bgs3 {
+.background--#{$grad}:hover {
+    background: $bg;
+}
+};
+
+/*apps y juegos*/
+$urls4: ( 
+        disway:url(../media/apps/disway_square.jpg), 
+        juegos:  url(../media/apps/juegos_square.jpg),
+        ubuddy: url(../media/apps/ubuddy_square.jpg),
+        hp:url(../media/apps/hp_square.jpg), 
+        ralph:  url(../media/apps/ralph_square.jpg),
+        sniper: url(../media/apps/sniper_square.jpg)
+          ); 
+
+$bgs4: ( 
+    disway: (linear-gradient(
+            rgba(170, 89, 224, 0.726), 
+            rgba(170, 89, 224, 0.726)),
+        url(../media/apps/disway_square.jpg)),
+        juegos:   (linear-gradient(
+            rgba(172, 52, 36, 0.726), 
+            rgba(172, 52, 36, 0.726)),
+            url(../media/apps/juegos_square.jpg)),
+     
+            ubuddy: (linear-gradient(
+            rgba(96, 180, 206, 0.726),
+            rgba(96, 180, 206, 0.726)),
+            url(../media/apps/ubuddy_square.jpg)),
+            hp: (linear-gradient(
+            rgba(82, 11, 26, 0.45), 
+            rgba(82, 11, 26, 0.45)),
+        url(../media/apps/hp_square.jpg)),
+        ralph:   (linear-gradient(
+            rgba(179, 142, 19, 0.774), 
+            rgba(179, 141, 19, 0.774)),
+            url(../media/apps/ralph_square.jpg)),
+     
+            sniper: (linear-gradient(
+            rgba(64, 49, 197, 0.76),
+            rgba(64, 49, 197, 0.76)),
+            url(../media/apps/sniper_square.jpg)),
+          ); 
+
+         
+@each $url, $img in $urls4 {
+    .background--#{$url} {
+        background: $img;
+         }};
+
+@each $grad, $bg in $bgs4 {
+.background--#{$grad}:hover {
+    background: $bg;
+}
+};
+
+/*motion*/
+$urls5: ( 
+        tanque:url(../media/motion/tanque_square.jpg), 
+        huawei:  url(../media/motion/huawei.jpg),
+        uncharted: url(../media/motion/unhcarted_square.jpg),
+        joker:url(../media/motion/joker_square.jpg), 
+        flash:  url(../media/motion/flash_square.jpg),
+        deadpool: url(../media/motion/deadpool_square.jpg)
+          ); 
+
+$bgs5: ( 
+    tanque: (linear-gradient(
+            rgba(135, 172, 13, 0.541), 
+            rgba(135, 172, 13, 0.541)),
+        url(../media/motion/tanque_square.jpg)),
+        huawei:   (linear-gradient(
+            rgba(172, 52, 36, 0.726), 
+            rgba(172, 52, 36, 0.726)),
+            url(../media/motion/huawei.jpg)),
+     
+            uncharted: (linear-gradient(
+            rgba(96, 180, 206, 0.726),
+            rgba(96, 180, 206, 0.726)),
+            url(../media/motion/unhcarted_square.jpg)),
+            joker: (linear-gradient(
+            rgba(82, 11, 26, 0.45), 
+            rgba(82, 11, 26, 0.45)),
+        url(../media/motion/joker_square.jpg)),
+        flash:   (linear-gradient(
+            rgba(179, 141, 19, 0.45), 
+            rgba(179, 141, 19, 0.45)),
+            url(../media/motion/flash_square.jpg)),
+     
+            deadpool: (linear-gradient(
+            rgba(64, 49, 197, 0.45),
+            rgba(64, 49, 197, 0.45)),
+            url(../media/motion/deadpool_square.jpg)),
+          ); 
+
+         
+@each $url, $img in $urls5 {
+    .background--#{$url} {
+        background: $img;
+         }};
+
+@each $grad, $bg in $bgs5 {
+.background--#{$grad}:hover {
+    background: $bg;
+}
+};
+
+/*web*/
+$urls6: ( 
+        arrow:url(../media/web/arrow_square.jpg), 
+        ed:  url(../media/web/ed_square.jpg),
+        formula: url(../media/web/formula_square.jpg)
+          ); 
+
+$bgs6: ( 
+    arrow: (linear-gradient(
+            rgba(5, 95, 10, 0.726), 
+            rgba(5, 95, 10, 0.726)),
+        url(../media/web/arrow_square.jpg)),
+        ed:   (linear-gradient(
+            rgba(31, 171, 195, 0.726), 
+            rgba(31, 171, 195, 0.726)),
+            url(../media/web/ed_square.jpg)),
+     
+            formula: (linear-gradient(
+            rgba(179, 31, 31, 0.726),
+            rgba(179, 31, 31, 0.726)),
+            url(../media/web/formula_square.jpg)),
+          ); 
+
+         
+@each $url, $img in $urls6 {
+    .background--#{$url} {
+        background: $img;
+         }};
+
+@each $grad, $bg in $bgs6 {
+.background--#{$grad}:hover {
+    background: $bg;
+}
+};
+
+
+/*proyectos*/
+
+.imgSoftware {
+    width: 50px;
+}
+
+#proyectoBody {
+    background-color:$color2;
+    color: white;
+}
+
+.resize{
+    width: 70%;
+}
+
+.resize2{
+    width: 40%;
+}
+
+
+/*contacto*/
+
+.icons {
+    width: 24px;
+}
+
+.btn_verde {
+    background-color: #64C4B3;
+}
+
+.mapa {
+    width: 80%;
+}
